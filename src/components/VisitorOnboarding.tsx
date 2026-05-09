@@ -241,13 +241,13 @@ export default function VisitorOnboarding({
           {/* Location */}
           <div>
             <label className="text-sm font-medium block mb-2">
-              State / Country
+             Country
             </label>
 
             <input
               type="text"
               value={form.location}
-              placeholder="Tamil Nadu, India..."
+              placeholder="Enter your country..."
               onChange={(e) =>
                 updateField(
                   "location",
