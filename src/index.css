@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===============================
+   DESIGN THEME – HSL Color System
+   =============================== */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 217 91% 60%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/* Cursor Glow */
+@layer utilities {
+  .cursor-glow {
+    position: relative;
+  }
+  
+  #cursor-glow {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    background: radial-gradient(circle, hsl(var(--primary) / 0.4), transparent);
+    transform: translate(-50%, -50%);
+  }
+
+  .dark #cursor-glow {
+    background: radial-gradient(circle, hsl(var(--primary) / 0.6), transparent);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(217, 91%, 75%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Mobile Fix */
+@media (max-width: 767px) {
+  #cursor-glow { display: none !important; }
+}
+
+/* Accessibility */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid hsl(var(--primary)) !important;
+  outline-offset: 3px !important;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+.ai-shimmer {
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(
+    90deg,
+    rgba(220,220,220,0.25) 25%,
+    rgba(255,255,255,0.7) 50%,
+    rgba(220,220,220,0.25) 75%
+  );
+
+  background-size: 200% 100%;
+
+  animation: shimmerMove 1.5s infinite linear;
+}
+
+.dark .ai-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(60,60,60,0.25) 25%,
+    rgba(120,120,120,0.35) 50%,
+    rgba(60,60,60,0.25) 75%
+  );
+
+  background-size: 200% 100%;
+
+  animation: shimmerMove 1.5s infinite linear;
+}
+
+@keyframes shimmerMove {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
