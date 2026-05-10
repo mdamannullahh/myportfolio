@@ -243,15 +243,15 @@ export const contact = [
   {
     id: "2",
     platform: "GitHub",
-    handle: "@mdamannullah",
-    link: "https://github.com/mdamannullah",
+    handle: "@mdamannullahh",
+    link: "https://github.com/mdamannullahh",
     icon: "github",
   },
   {
     id: "3",
     platform: "Twitter/X",
-    handle: "@md_amannullah",
-    link: "https://twitter.com/md_amannullah",
+    handle: "@md_amannullahh",
+    link: "https://twitter.com/md_amannullahh",
     icon: "twitter",
   },
   {
@@ -264,15 +264,15 @@ export const contact = [
   {
     id: "5",
     platform: "Email",
-    handle: "info.mohmdam@gmail.com",
-    link: "mailto:info.mohmdam@gmail.com",
+    handle: "info.amannullah@gmail.com",
+    link: "mailto:info.amannullah@gmail.com",
     icon: "mail",
   },
   {
     id: "6",
     platform: "Phone",
-    handle: "+91-7667633707",
-    link: "tel:+917667633707",
+    handle: "+91-6202763553",
+    link: "https://wa.me/6202763553",
     icon: "phone",
   },
 ];
