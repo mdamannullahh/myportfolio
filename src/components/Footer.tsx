@@ -216,24 +216,30 @@ export const Footer = () => {
           {/* MADE WITH */}
           <div
             className="
-              flex
-              items-center
-              gap-2
-            "
+    flex
+    flex-col
+    sm:flex-row
+    items-center
+    justify-center
+    gap-2
+    text-center
+  "
           >
-            Made with
+            <span>Made with</span>
 
             <Heart
               className="
-                h-4
-                w-4
-                fill-red-500
-                text-red-500
-                animate-pulse
-              "
+      h-4
+      w-4
+      fill-red-500
+      text-red-500
+      animate-pulse
+    "
             />
 
-            using React, AI & futuristic engineering
+            <span>
+              using React, AI & futuristic engineering
+            </span>
           </div>
 
           {/* PORTFOLIO TAG */}
