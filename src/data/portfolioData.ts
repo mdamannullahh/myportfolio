@@ -272,7 +272,7 @@ export const contact = [
     id: "6",
     platform: "Phone",
     handle: "+91-6202763553",
-    link: "https://wa.me/6202763553",
+    link: "https://wa.me/+916202763553",
     icon: "phone",
   },
 ];
